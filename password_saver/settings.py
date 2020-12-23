@@ -14,8 +14,8 @@ from django.contrib.messages import constants as messages
 from pathlib import Path
 
 import os
-import django_heroku
-import dj_database_url
+#import django_heroku
+#import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -85,9 +85,9 @@ WSGI_APPLICATION = 'password_saver.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'password_saver',
+        'NAME': 'postgres',
         'USER': 'postgres',
-        'PASSWORD': '',
+        'PASSWORD': 'kishore188',
         'HOST': 'localhost'
     }
 }
@@ -140,4 +140,4 @@ MESSAGE_TAGS = {
 }
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
